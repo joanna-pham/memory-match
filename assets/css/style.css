@@ -8,26 +8,45 @@ body {
 
 .lfz-card {
   background-image: url('../images/lfz-card.jpg');
-  object-fit: cover;
-  border: 5px solid blue;
+  background-size: cover;
+  max-height: 100%;
+  margin: 3px;
+  background-position: center;
 }
 
 .flex {
   display: flex;
 }
 
+header {
+  width: 100%;
+}
+/* width set to 100% for header to take up entire space */
+
 aside {
-  border: 5px solid blue;
+  margin: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-main {
-  justify-content: space-between;
-  flex-wrap: wrap;
+aside > div {
+  background-color: #87CEEB;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .stats {
-  display: block;
+  margin: 10px;
+}
+
+.stats > p {
+  font-size: 25px;
+}
+
+main {
+  flex-wrap: wrap;
+  height: 85vh;
 }
