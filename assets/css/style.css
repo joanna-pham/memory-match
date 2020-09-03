@@ -1,1 +1,33 @@
 
+body {
+  height: 97vh;
+  background-image: url('../images/lfz-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.lfz-card {
+  background-image: url('../images/lfz-card.jpg');
+  object-fit: cover;
+  border: 5px solid blue;
+}
+
+.flex {
+  display: flex;
+}
+
+aside {
+  border: 5px solid blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.stats {
+  display: block;
+}
