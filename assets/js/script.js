@@ -25,7 +25,6 @@ function handleClick(event) {
     cards.removeEventListener('click', handleClick)
 
     if (firstCardClasses === secondCardClasses) {
-      // console.log('the images match')
       firstCardClicked = null; //resetting global variables around each round
       secondCardClicked = null;
       cards.addEventListener('click', handleClick); //whether the cards match or not, you need to click for next round
