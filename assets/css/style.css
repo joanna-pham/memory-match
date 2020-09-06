@@ -102,6 +102,28 @@ main {
   position: absolute;
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 190vh;
+}
+
+.modal-content {
+  background-color:#59ACF5;
+  border: 5px solid black;
+  width: 45vh;
+  height: 33vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 /* place this class at the bottom so that it's not overridden by cascading */
 .hidden {
   display: none;

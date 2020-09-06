@@ -10,9 +10,9 @@ var firstCardClasses;  //store the classes of card-front siblings to the card fi
 
 var secondCardClasses; // store the classes of the card-front siblings to the second card when clicked
 
-var maxMatches = 9;
+var maxMatches = 9; //contain a value that represents amount of matches required to win the game
 
-var matches = 0;
+var matches = 0; //track amount of matches the user has completed during the game
 
 var attempts = 0; //track number of attempted matches
 
@@ -39,8 +39,14 @@ function handleClick(event) {
       firstCardClicked = null; //resetting global variables around each round
       secondCardClicked = null;
       cards.addEventListener('click', handleClick); //whether the cards match or not, you need to click for next round
-      attempts++
+      attempts++;
+      matches++ //adds every time the user gets a match
       displayStats();
+
+      if (maxMatches === matches) { //if they win the game
+        var showModal = document.querySelector('.modal-overlay');
+        showModal.classList.remove('hidden');
+      }
 
     } else {
       setTimeout(function () { //waiting to hide again
@@ -64,5 +70,9 @@ function displayStats() {
   attemptsStats.textContent = attempts;
 
   var accuracyStats = document.getElementById('numAccuracy');
-  accuracyStats.textContent = matches / attempts;
+  accuracyStats.textContent = calculateAccuracy(attempts, matches);
+}
+
+function calculateAccuracy(attempts, matches) {
+  return Math.trunc((matches / attempts)*100) + '%'
 }
