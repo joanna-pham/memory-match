@@ -119,6 +119,7 @@ main {
   width: 45vh;
   height: 33vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -127,4 +128,12 @@ main {
 /* place this class at the bottom so that it's not overridden by cascading */
 .hidden {
   display: none;
+}
+
+button {
+  display: block;
+  width: 40%;
+  margin-top: 20px;
+  border-radius: 12px;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }

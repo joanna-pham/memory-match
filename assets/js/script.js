@@ -1,5 +1,4 @@
 var cards = document.querySelector('#gameCards'); //selecting id gameCards (attached to main element)
-
 cards.addEventListener('click', handleClick); //event listener for a click on the main element
 
 var firstCardClicked;  // store the 1st card clicked
@@ -17,6 +16,10 @@ var matches = 0; //track amount of matches the user has completed during the gam
 var attempts = 0; //track number of attempted matches
 
 var gamesPlayed = 0; // track number of games player has played
+
+// //codes for clicking play again on modal
+var resetButton = document.getElementById('buttonPlayAgain');
+resetButton.addEventListener('click', resetGame);
 
 
 function handleClick(event) {
@@ -62,6 +65,7 @@ function handleClick(event) {
   }
 }
 
+//displaying stats of the game
 function displayStats() {
   var gamesPlayedStats = document.getElementById('numGamesPlayed');
   gamesPlayedStats.textContent = gamesPlayed;
@@ -74,5 +78,32 @@ function displayStats() {
 }
 
 function calculateAccuracy(attempts, matches) {
-  return Math.trunc((matches / attempts)*100) + '%'
+  if (!attempts) {
+    return attempts.textContent = "0%";
+  } else {
+    return Math.trunc((matches / attempts) * 100) + '%' //gives whole number percentage
+  }
 }
+
+function resetGame() {
+  attempts = 0; //reset stats back to zero
+  matches = 0;
+  gamesPlayed++; //incrementing games played
+  displayStats();
+  resetCards();
+
+  var hideModal = document.getElementById('modal');
+  hideModal.classList.add('hidden')
+}
+
+function resetCards() {
+  var hiddenCards = document.querySelectorAll('.card-back');
+
+  for (var i = 0; i < hiddenCards.length; i++) {
+    hiddenCards[i].classList.remove('hidden')
+  }
+}
+
+// //codes for clicking play again on modal
+// var resetButton = document.getElementById('buttonPlayAgain');
+// resetButton.addEventListener('click', resetGame);
