@@ -107,3 +107,50 @@ function resetCards() {
 // //codes for clicking play again on modal
 // var resetButton = document.getElementById('buttonPlayAgain');
 // resetButton.addEventListener('click', resetGame);
+
+//dynamic card creation
+
+var cardsArray = [
+  'css-logo';
+  'docker-logo';
+  'github-logo';
+  'html-logo';
+  'js-logo';
+  'mysql-logo';
+  'node-logo';
+  'php-logo';
+  'react-logo';
+  'css-logo';
+  'docker-logo';
+  'github-logo';
+  'html-logo';
+  'js-logo';
+  'mysql-logo';
+  'node-logo';
+  'php-logo';
+  'react-logo';
+];
+
+var contain = document.createElement('div');
+contain.classList.add('container');
+document.body.appendChild(contain);
+
+
+var mainElem = document.createElement('main');
+mainElem.classList.add('flex');
+mainElem.classList.add('col-10');
+mainElem.getAttribute('id', 'gameCards');
+contain.appendChild(mainElem);
+
+var div1 = document.createElement('div');
+div1.classList.add('col-2');
+div1.classList.add('lfz-card');
+mainElem.appendChild(div1);
+
+var divOneFront = document.createElement('div');
+divOneFront.classList.add('card-front');
+divOneFront.classList.add('css-logo');
+div1.appendChild(divOneFront);
+var divOneBack = document.createElement('div');
+divOneBack.classList.add('card-back');
+div1.appendChild(divOneBack);
