@@ -91,6 +91,9 @@ function resetGame() {
   gamesPlayed++; //incrementing games played
   displayStats();
   resetCards();
+  destroyCards();
+  cardDeck();
+  shuffleCards();
 
   var hideModal = document.getElementById('modal');
   hideModal.classList.add('hidden')
@@ -156,3 +159,16 @@ function cardDeck() {
 
 
 cardDeck();
+
+function shuffleCards() {
+  for (var i = 0; i < cardsArray.length; i++) {
+    var randomPosition = Math.floor(Math.random() * cardsArray.length);
+    var placeHolder = cardsArray[i]; //looks for a value to hold as a placeholder
+    cardsArray[i] = cardsArray[randomPosition];
+    cardsArray[randomPosition] = placeHolder;
+  }
+}
+
+function destroyCards () {
+  gameCards.innerHTML = "";
+}
