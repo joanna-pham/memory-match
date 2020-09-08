@@ -111,46 +111,48 @@ function resetCards() {
 //dynamic card creation
 
 var cardsArray = [
-  'css-logo';
-  'docker-logo';
-  'github-logo';
-  'html-logo';
-  'js-logo';
-  'mysql-logo';
-  'node-logo';
-  'php-logo';
-  'react-logo';
-  'css-logo';
-  'docker-logo';
-  'github-logo';
-  'html-logo';
-  'js-logo';
-  'mysql-logo';
-  'node-logo';
-  'php-logo';
-  'react-logo';
+  'css-logo',
+  'docker-logo',
+  'gitHub-logo',
+  'html-logo',
+  'js-logo',
+  'mysql-logo',
+  'node-logo',
+  'php-logo',
+  'react-logo',
+  'css-logo',
+  'docker-logo',
+  'gitHub-logo',
+  'html-logo',
+  'js-logo',
+  'mysql-logo',
+  'node-logo',
+  'php-logo',
+  'react-logo',
 ];
 
-var contain = document.createElement('div');
-contain.classList.add('container');
-document.body.appendChild(contain);
+function cardDeck() {
+  for (var i = 0; i < 18; i++) { //18 cards total to make
+
+    var div1 = document.createElement('div'); //creating div element with classes
+    div1.classList.add('col-2');
+    div1.classList.add('lfz-card');
+    cards.appendChild(div1); //cards was declared in global with id of gameCards
+
+    var divOneFront = document.createElement('div'); //18 div element with card-front class
+    divOneFront.classList.add('card-front');
+    div1.appendChild(divOneFront);
+
+    var divOneBack = document.createElement('div'); //18 div elements with card-back class
+    divOneBack.classList.add('card-back');
+    div1.appendChild(divOneBack);
+  }
+
+  for (var i = 0; i < cardsArray.length; i++) { //looping through each logo in cards array
+    var cardFront = document.querySelectorAll('.card-front');
+    cardFront[i].classList.add(cardsArray[i]) //each index in cards array is added to the card-front class starting at index
+  }
+}
 
 
-var mainElem = document.createElement('main');
-mainElem.classList.add('flex');
-mainElem.classList.add('col-10');
-mainElem.getAttribute('id', 'gameCards');
-contain.appendChild(mainElem);
-
-var div1 = document.createElement('div');
-div1.classList.add('col-2');
-div1.classList.add('lfz-card');
-mainElem.appendChild(div1);
-
-var divOneFront = document.createElement('div');
-divOneFront.classList.add('card-front');
-divOneFront.classList.add('css-logo');
-div1.appendChild(divOneFront);
-var divOneBack = document.createElement('div');
-divOneBack.classList.add('card-back');
-div1.appendChild(divOneBack);
+cardDeck();
