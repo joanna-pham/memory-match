@@ -89,11 +89,11 @@ function resetGame() {
   attempts = 0; //reset stats back to zero
   matches = 0;
   gamesPlayed++; //incrementing games played
-  displayStats();
+  displayStats(); //show stats
   resetCards();
   destroyCards();
+  shuffleCards(); //shuffle cards before making card deck
   cardDeck();
-  shuffleCards();
 
   var hideModal = document.getElementById('modal');
   hideModal.classList.add('hidden')
