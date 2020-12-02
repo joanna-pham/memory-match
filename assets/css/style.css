@@ -1,59 +1,59 @@
 
 body {
   height: 97vh;
-  background-image: url('../images/lfz-background.jpg');
+  background-image: url('../images/background.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .lfz-card {
-  background-image: url('../images/lfz-card.jpg');
-  background-size: cover;
+  background-image: url('../images/card.png');
+  background-size: contain;
   /* max-height: 100%; */
   height: 200px;
-  margin: 3px;
+  margin: 4px;
   background-position: center;
   position: relative;
 }
 
 .card-back {
-  background-image: url('../images/lfz-card.jpg');
+  background-image: url('../images/card.png');
 }
 
-.css-logo {
-  background-image: url('../images/css-logo.png');
+.chandler-bing {
+  background-image: url('../images/chandler-bing.png');
 }
 
-.docker-logo {
-  background-image: url('../images/docker-logo.jpg');
+.janice {
+  background-image: url('../images/janice.png');
 }
 
-.gitHub-logo {
-  background-image: url('../images/gitHub-logo.png');
+.joey-tribbiani {
+  background-image: url('../images/joey-tribbiani.png');
 }
 
-.html-logo {
-  background-image: url('../images/html-logo.png');
+.marcel {
+  background-image: url('../images/marcel.png');
 }
 
-.js-logo {
-  background-image: url('../images/js-logo.png');
+.monica-geller {
+  background-image: url('../images/monica-geller.png');
 }
 
-.mysql-logo {
-  background-image: url('../images/mysql-logo.jpg');
+.phoebe-buffay {
+  background-image: url('../images/phoebe-buffay.png');
 }
 
-.node-logo {
-  background-image: url('../images/node-logo.png');
+.rachel-greene {
+  background-image: url('../images/rachel-greene.png');
 }
 
-.php-logo {
-  background-image: url('../images/php-logo.jpeg')
+.ross-geller {
+  background-image: url('../images/ross-geller.png')
 }
 
-.react-logo {
-  background-image: url('../images/react-logo.png');
+.richard-burke {
+  background-image: url('../images/richard-burke.png');
 }
 
 .flex {
@@ -66,7 +66,6 @@ header {
 /* width set to 100% for header to take up entire space */
 
 aside {
-  margin: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,6 +81,7 @@ aside > div {
 
 .stats {
   margin: 10px;
+  background-color: #decbb7;
 }
 
 .stats > p {
@@ -90,7 +90,6 @@ aside > div {
 
 main {
   flex-wrap: wrap;
-  /* height: 85vh; */
 }
 
 .card-front, .card-back {
@@ -133,7 +132,7 @@ main {
 button {
   display: block;
   width: 40%;
-  margin-top: 20px;
   border-radius: 12px;
-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
 }
