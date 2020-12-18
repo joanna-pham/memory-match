@@ -4,6 +4,8 @@ body {
   background-image: url('../images/background.png');
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 .lfz-card {
@@ -73,10 +75,11 @@ aside {
 
 aside > div {
   background-color: #87CEEB;
-  height: 80px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 }
 
 .stats {
@@ -113,7 +116,7 @@ main {
 }
 
 .modal-content {
-  background-color:#59ACF5;
+  background-color:#d4d3de;
   border: 5px solid black;
   width: 45vh;
   height: 33vh;
@@ -122,6 +125,17 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-bottom: 15px;
+}
+
+.duck-pic {
+  margin-right: 50px;
+  width: 100px;
+}
+
+.chick-pic {
+  margin-left: 50px;
+  width: 50px;
 }
 
 /* place this class at the bottom so that it's not overridden by cascading */
@@ -135,4 +149,15 @@ button {
   border-radius: 12px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   cursor: pointer;
+}
+
+.audio-setting {
+  width: 95%;
+  height: 40px;
+}
+
+.audio-box {
+  background-color: transparent;
+  justify-content: center;
+  align-items: flex-start;
 }

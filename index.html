@@ -7,7 +7,8 @@
   <title>Friends Memory Match</title>
   <link rel="stylesheet" href="./assets/css/grid.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -33,14 +34,18 @@
 
     <div class="row">
       <header>
-        <h1 class="center"><img src="assets/images/banner.png" width="750px"></h1>
+        <h1 class="center">
+          <img src="assets/images/duck.png" class="duck-pic">
+          <img src="assets/images/banner.png" width="750px">
+          <img src="assets/images/chick.png" class="chick-pic">
+        </h1>
       </header>
     </div>
 
-    <div class="row row-cards bg-overlay">
+    <div class="row bg-overlay">
       <aside class="col-2">
         <div class="stats">
-          <p>Stats</p>
+          <p><img src="./assets/images/central-perk.gif" width="170px"></p>
         </div>
         <div class="stats">
           <p>Game Played</p>
@@ -60,6 +65,12 @@
         <div class="stats" id="numAccuracy">
           <p>0</p>
         </div>
+        <div class="stats audio-box">
+          <audio controls class="audio-setting">
+          <source src="https://www.televisiontunes.com/uploads/audio/Friends.mp3" />
+        </audio>
+        </div>
+
       </aside>
       <!-- </div> -->
 
